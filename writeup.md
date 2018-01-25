@@ -60,9 +60,20 @@ We perform the following steps:
 
 ![alt text][image7]
 
-In order to draw a single line on the left and right lanes, I modified the `draw_lines()` function by ...
+In order to draw a single line on the left and right lanes, I modified the original `draw_lines()` function by:
+
+* Find the Center Cooridinates of the image to seperate left and right lines
+
+* Find X and Y coordinates of left and right lanes. If the line has a negative slope and is on the left side of the image, we consider it as a left lane. If the line has a positive slope and is on the right side of the image, we consider it as a right lane.
+
+* Using the left and right line segments, we use the `np.polyfit` function to find the slope (`m`) and intercept (`b`) of the full exteneded line.
+
+* Next, we use our selected region to extrapolate to the top and bottom of the lane:
 
 ![alt text][image8]
+
+* The final improved output is shown below:
+
 ![alt text][image9]
 
 
