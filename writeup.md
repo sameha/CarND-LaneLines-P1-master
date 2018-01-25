@@ -81,13 +81,13 @@ In order to draw a single line on the left and right lanes, I modified the origi
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when ... 
+One potential shortcoming would be what would happen when the lanes are not relatively in the center of the image, but to the corners of the image.
 
-Another shortcoming could be ...
+Another shortcoming could be when there is a steep curve like the challenge video.
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+In cases of steep curves, a possible improvement would be to seperate the extended line into two lines.
 
-Another potential improvement could be to ...
+Another potential improvement could be to recalculate the slope of the extended line based on the current line and previous lines (take history into consideration).
