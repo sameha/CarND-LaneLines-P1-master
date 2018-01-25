@@ -23,6 +23,7 @@ The goals / steps of this project are the following:
 [image7]: ./examples/writeup_image7.png "Final Output"
 [image8]: ./examples/writeup_image8.png "Improved Draw Lines"
 [image9]: ./examples/writeup_image9.png "Improved Final Output"
+
 ---
 
 ### Reflection
