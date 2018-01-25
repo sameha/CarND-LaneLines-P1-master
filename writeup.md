@@ -16,7 +16,13 @@ The goals / steps of this project are the following:
 
 [image1]: ./examples/writeup_image1.png "Original Image"
 [image2]: ./examples/writeup_image2.png "Grayscale Image"
-
+[image3]: ./examples/writeup_image3.png "Gaussian Smoothing"
+[image4]: ./examples/writeup_image4.png "Canny Edge Detection"
+[image5]: ./examples/writeup_image5.png "Region Selection"
+[image6]: ./examples/writeup_image6.png "Hough Lines"
+[image7]: ./examples/writeup_image7.png "Final Output"
+[image8]: ./examples/writeup_image8.png "Improved Draw Lines"
+[image9]: ./examples/writeup_image9.png "Improved Final Output"
 ---
 
 ### Reflection
@@ -35,15 +41,28 @@ We perform the following steps:
 
 2- Then I applied **Gaussian Smoothing** using the`cv2.GaussianBlur` function:
 
-3- As lanes on the road usually consist of linear lines, we use the Canny Edge Detection algorithm to detect edges in the picture.
-4- Fourth, we use region select, assuming that the front facing camera that took the image is mounted in a fixed position on the car, such that the lane lines will always appear in the same general region of the image. This will help use detect the lanes for the car we are driving. 
-5- Next, we use the **Hough Transform** to find the lanes in the selected region. Note that the `hough_lines` functions used calls a special function to draw the lines, `draw_lines()`. More on that later.
-6- Finally, I draw the detected lines and superimpose them with a red color on our original image using the `weighted_img` function.
+![alt text][image3]
+
+3- As lanes on the road usually consist of linear lines, we use the Canny Edge Detection algorithm to detect edges in the picture:
+
+![alt text][image4]
+
+4- Fourth, we use region select, assuming that the front facing camera that took the image is mounted in a fixed position on the car, such that the lane lines will always appear in the same general region of the image. This will help use detect the lanes for the car we are driving:
+
+![alt text][image5]
+
+5- Next, we use the **Hough Transform** to find the lanes in the selected region. Note that the `hough_lines` functions used calls a special function to draw the lines, `draw_lines()` (More on that later):
+
+![alt text][image6]
+
+6- Finally, I draw the detected lines and superimpose them with a red color on our original image using the `weighted_img` function:
+
+![alt text][image7]
 
 In order to draw a single line on the left and right lanes, I modified the `draw_lines()` function by ...
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
+![alt text][image8]
+![alt text][image9]
 
 
 
