@@ -14,8 +14,8 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: './examples/writeup_image1.png' "Original Image"
-[image2]: './examples/writeup_image2.png' "Grayscale Image"
+[image1]: ./examples/writeup_image1.png "Original Image"
+[image2]: ./examples/writeup_image2.png "Grayscale Image"
 
 ---
 
